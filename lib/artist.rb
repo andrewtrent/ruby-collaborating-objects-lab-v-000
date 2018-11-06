@@ -17,8 +17,8 @@ class Artist
     if self.find_by_name(artist_name)
       self.find_by_name(artist_name)
     else
-      res = Artist.new(artist_name)
-      puts res
+      self.new(artist_name)
+
     end
 
   end
