@@ -29,6 +29,12 @@ class Artist
     @@all << self
   end
 
+  def print_songs
+    @songs.each do |x|
+      puts x
+    end
+  end
+
 
 
 end
