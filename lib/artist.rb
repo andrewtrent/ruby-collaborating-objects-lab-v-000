@@ -36,11 +36,11 @@ class Artist
 
   def self.find_or_create_by_name(artist_name)
 
-    if self.find_by_name(artist_name) != nil
-      self.find_by_name(artist_name)
-    else
+    if self.find_by_name(artist_name).nil?
       new_art = Artist.new(artist_name).save
       new_art[0]
+    else
+      self.find_by_name(artist_name)
     end
 
   end
