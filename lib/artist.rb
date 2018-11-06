@@ -10,9 +10,17 @@ class Artist
   end
 
   def self.find_by_name(artist_name)
-    @@all.detect {|x| x if x.name = artist_name}
-
+    self.all.detect {|x| x if x.name = artist_name}
   end
+
+    def self.find_or_create_by_name(artist_name)
+      if self.find_by_name(artist_name).nil?
+        Artist.new(artist_name).save
+      else
+        self.find_by_name(artist_name)
+      end
+    end
+
 
   def initialize(name)
     @name = name
@@ -32,16 +40,6 @@ class Artist
     @songs.each do |x|
       puts x.name
     end
-  end
-
-  def self.find_or_create_by_name(artist_name)
-
-    if self.find_by_name(artist_name).nil?
-      Artist.new(artist_name).save
-    else
-      self.find_by_name(artist_name)
-    end
-
   end
 
 end
