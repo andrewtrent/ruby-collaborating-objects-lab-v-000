@@ -39,11 +39,11 @@ class Artist
     if self.find_by_name(artist_name) != nil
       self.find_by_name(artist_name)
     else
-      Artist.new(artist_name).save
-      self.find_by_name(artist_name)
+      new_art = Artist.new(artist_name)
+      save(new_art)
+      new_art
     end
 
   end
-binding.pry
 
 end
