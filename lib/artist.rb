@@ -39,7 +39,7 @@ class Artist
     if self.find_by_name(artist_name) != nil
       self.find_by_name(artist_name)
     else
-      self.new(artist_name)
+      Artist.new(artist_name)
 
     end
 
