@@ -11,7 +11,7 @@ class Artist
   def self.find_or_create_by_name(artist_name)
     if @@all.each {|x| x if x.name = artist_name} == nil || false
       new_art = Artist.new(artist_name)
-      new_art
+      new_art[0]
     else
       @@all.each {|x| x if x.name = artist_name}
     end
