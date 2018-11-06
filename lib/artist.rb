@@ -24,7 +24,7 @@ class Artist
     @songs << song
   end
 
-  def save(art)
+  def save
     @@all << art
   end
 
@@ -40,7 +40,7 @@ class Artist
       self.find_by_name(artist_name)
     else
       new_art = Artist.new(artist_name)
-      save(new_art)
+      new_art.save
       new_art
     end
 
