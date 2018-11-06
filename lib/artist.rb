@@ -14,7 +14,11 @@ class Artist
 
   def self.find_or_create_by_name(artist_name)
 
-    self.find_by_name(artist_name) if true else new_art = Artist.new(artist_name)
+    if self.find_by_name(artist_name)
+      self.find_by_name(artist_name)
+    else
+      new_art = Artist.new(artist_name)
+    end
 
   end
 
