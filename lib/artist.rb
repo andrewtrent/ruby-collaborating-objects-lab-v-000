@@ -40,7 +40,7 @@ class Artist
       self.find_by_name(artist_name)
     else
       Artist.new(artist_name).save
-
+      self.find_by_name(artist_name)
     end
 
   end
