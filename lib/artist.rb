@@ -4,9 +4,9 @@ class Artist
   @@all = []
 
 
-    def self.all
-      @@all
-    end
+  def self.all
+    @@all 
+  end
 
   def self.find_or_create_by_name(artist_name)
     if @@all.each {|x| x if x.artist.name = artist_name} == nil
@@ -27,6 +27,10 @@ class Artist
 
   def save
     @@all << self
+  end
+
+  def songs 
+    @@songs 
   end
 
 
