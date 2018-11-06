@@ -17,7 +17,7 @@ class Artist
     if self.find_by_name(artist_name)
       self.find_by_name(artist_name)
     else
-      new_art = Artist.new(artist_name)
+      Artist.new(artist_name)
     end
 
   end
