@@ -10,7 +10,7 @@ class Artist
   end
 
   def self.find_by_name(artist_name)
-    self.all.each {|x| x if x.name = artist_name}
+    @@all.each {|x| x if x.name = artist_name}
   end
 
 
