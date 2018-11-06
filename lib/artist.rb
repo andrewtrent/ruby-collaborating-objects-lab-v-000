@@ -10,10 +10,8 @@ class Artist
   end
 
   def self.find_by_name(artist_name)
-    @@all.each {|x| x if x.name = artist_name}
+    @@all.map {|x| x if x.name = artist_name}
   end
-
-
 
   def initialize(name)
     @name = name
