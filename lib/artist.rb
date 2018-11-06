@@ -18,7 +18,7 @@ class Artist
       self.find_by_name(artist_name)
     else
       res = Artist.new(artist_name)
-      res
+      puts res
     end
 
   end
