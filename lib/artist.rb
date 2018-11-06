@@ -24,8 +24,8 @@ class Artist
     @songs << song
   end
 
-  def save
-    @@all << self
+  def save(art)
+    @@all << art
   end
 
   def print_songs
