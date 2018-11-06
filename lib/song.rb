@@ -12,7 +12,7 @@ class Song
   def self.new_by_filename(filename)
     info_array = filename.chomp(".mp3").split(" - ")
     song_new = Song.new(info_array[1])
-    song_new.artist = Artist.find_or_create_by_name(info_array[0])
+    song_new.artist = Artist.find_or_create_by_name(info_array[0]).add_song
     song_new.genre = info_array[2]
     song_new
   end
